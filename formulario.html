@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulário</title>
+
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+
+            form {
+                padding: 50px;
+                background-color: rgb(233, 218, 218);
+
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/enviar" method="POST">
+            <input type="text" name="nome" placeholder="Digite seu nome" />
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" />
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" />
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" />
+            <label for="idade">Sua Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="100" />
+            <label for="idade">Sua Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="100" />
+            <textarea
+                name="mensagem"
+                rows="4"
+                cols="50"
+                placeholder="Digite sua mensagem"
+            ></textarea>
+            <select name="opcoes">
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+            </select>
+            <input type="checkbox" name="interesse" value="programacao" />
+            Programação
+            <input type="checkbox" name="interesse" value="design" /> Design
+            <input type="radio" name="genero" value="masculino" /> Masculino
+            <input type="radio" name="genero" value="feminino" /> Feminino
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+
+            <input type="text" name="cpf" placeholder="Digite seu CPF" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+        </form>
+    </body>
+</html>
